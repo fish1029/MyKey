@@ -1,0 +1,19 @@
+﻿android_stdio64"D:\program\Android\Android Studio\bin\studio64.exe"-
+bilibili"D:\program\bilibili\哔哩哔哩.exe"#b
+code"D:\program\Microsoft VS Code\Code.exe"#c
+cxstudy"D:\program\cxstudy\cxstudy.exe"#n
+everything"C:\Program Files\Everything\Everything.exe"#s
+firefox"C:\Program Files (x86)\Mozilla Firefox\firefox.exe"#f
+java_idea64"D:\program\IntelliJ IDEA Community Edition 2025.2.2\bin\idea64.exe"#g
+notepad"C:\Program Files\Notepad++\notepad2.exe"-
+obsidian"C:\Users\34256\AppData\Local\Programs\Obsidian\Obsidian.exe"#w
+pycharm64"D:\program\PyCharm 2025.2.4\bin\pycharm64.exe"-
+qqmusic"D:\program\QQMusic\QQMusic.exe"-
+systeminformer"C:\Program Files\SystemInformer\SystemInformer.exe"-
+telegram"D:\program\Telegram Desktop\telegram.exe"-
+terminal"C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.23.12811.0_x64__8wekyb3d8bbwe\wt.exe"#a
+winword"C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE"-
+vmware"D:\program\VMware Workstation\vmware.exe"-
+visual_stdio"D:\program\Microsoft Visual Studio\2022\Community\Common7\IDE\devenv.exe"-
+powerpnt"C:\Program Files\Microsoft Office\root\Office16\POWERPNT.EXE"-
+reader"D:\myproject\reader\Reader.exe"#q

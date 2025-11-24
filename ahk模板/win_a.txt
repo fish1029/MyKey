@@ -1,0 +1,17 @@
+﻿#a::
+    Process, Exist, WindowsTerminal.exe
+    if (ErrorLevel) {
+        IfWinActive, ahk_pid %ErrorLevel% 
+        {
+            WinMinimize , ahk_pid %ErrorLevel%
+        }
+        else {
+            WinActivate, ahk_pid %ErrorLevel%
+        }
+        return
+    }
+
+    else {
+        Run, %terminal_path%
+        return
+    }

@@ -1,0 +1,3 @@
+﻿#f::
+    SwitchOrActivateWordWindows("MozillaWindowClass", "firefox.exe", firefox_path, Last_firefox)
+    return

@@ -1,0 +1,2 @@
+    SwitchOrActivateWordWindows("SunAwtFrame", "studio64.exe", android_stdio64_path, Last_android_stdio64)
+return
