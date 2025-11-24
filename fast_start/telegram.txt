@@ -1,0 +1,26 @@
+    Process, Exist, telegram.exe
+    if (ErrorLevel)
+    {
+        IfWinActive, ahk_pid %ErrorLevel%
+        {
+            WinMinimize , ahk_pid %ErrorLevel%
+        }
+        else
+        {
+            WinActivate, ahk_pid %ErrorLevel%
+            IfWinActive, ahk_pid %ErrorLevel%
+            {
+            }
+            else
+            {
+
+                Run, %telegram_path%
+            }
+        }
+
+    }
+    else
+    {
+        Run, %telegram_path%
+    }
+return

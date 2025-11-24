@@ -1,0 +1,19 @@
+    Process, Exist, QQMusic.exe
+    if (ErrorLevel) {
+        IfWinActive, ahk_exe QQMusic.exe
+        {
+            ActiveHwnd := WinExist("A")
+            WinGet, ActivePID, PID, ahk_id %ActiveHwnd%
+            WinGet, ProcessName, ProcessName, ahk_id %ActiveHwnd%
+            WinMinimize , ahk_id %ActiveHwnd%
+            return
+        }
+        else {
+            Run, %qqmusic_path%
+            return
+        }
+    }
+    else {
+        Run, %qqmusic_path%
+    }
+return

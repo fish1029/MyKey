@@ -1,0 +1,2 @@
+    SwitchOrActivateWordWindows("OpusApp", "WINWORD.EXE", winword_path, Last_winword)
+    return

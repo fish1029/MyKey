@@ -1,0 +1,2 @@
+    SwitchOrActivateWordWindows("PPTFrameClass", "POWERPNT.EXE", powerpnt, Last_powerpnt)
+    return

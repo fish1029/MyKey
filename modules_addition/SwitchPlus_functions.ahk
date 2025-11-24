@@ -1,6 +1,5 @@
 ﻿
 SwitchOrActivateWordWindows(winClass, processName, appPath, ByRef LastHwndVar) {
-
     found := True
     if (found)
     {

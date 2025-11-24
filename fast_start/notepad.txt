@@ -1,0 +1,32 @@
+ {
+        Process, Exist, notepad2.exe
+        if (ErrorLevel)
+        {
+            IfWinActive, ahk_pid %ErrorLevel%
+            {
+                WinMinimize , ahk_pid %ErrorLevel%
+                return
+            }
+            else
+            {
+                WinActivate, ahk_pid %ErrorLevel%
+                IfWinActive, ahk_pid %ErrorLevel%
+                {
+                }
+                else
+                {
+
+                    Run, %notepad_path%
+                }
+            }
+            return
+
+        }
+        else
+        {
+            Run, %notepad_path%
+
+        }
+        return
+
+    }

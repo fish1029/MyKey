@@ -1,0 +1,4 @@
+﻿#b::
+    SwitchOrActivateWordWindows("Chrome_WidgetWin_1", "哔哩哔哩.exe", bilibili_path, Last_bilibili)
+    return
+

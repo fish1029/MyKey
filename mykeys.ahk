@@ -31,7 +31,7 @@ menu,tray,Icon,%myico%
 
 ;3333333333333 z x c v b n m 
 ;#Include modules\win_z.ahk ;tip.ahk固定功能(截屏)
-#Include modules\win_x.ahk
+;#Include modules\win_x.ahk
 #Include modules\win_c.ahk
 ;#Include modules\win_v.ahk ;系统粘贴
 #Include modules\win_b.ahk

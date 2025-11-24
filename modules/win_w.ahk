@@ -1,0 +1,15 @@
+﻿#w::
+    Process, Exist, Obsidian.exe
+    if (ErrorLevel) {
+        IfWinActive, ahk_pid %ErrorLevel% 
+        {
+            WinMinimize , ahk_pid %ErrorLevel%
+        }
+        else {
+            WinActivate, ahk_pid %ErrorLevel%
+        }
+    }
+    else {
+        Run, %obsidian_path%
+    }
+return
