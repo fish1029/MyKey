@@ -27,10 +27,7 @@ config.txt，修改应用路径为你的实际安装路径
 ## 方法1：直接运行
 双击 mykeys.ahk 文件
 
-## 方法2：命令行启动
-AutoHotkeyU64.exe mykeys.ahk
-
-## 方法3：使用 script\mykey.py 脚本
+## 方法2：使用 script\mykey.py 脚本
 ### 初次使用将 mykey.py中的
 第45行: 
 exe_path = r"C:\Program Files\AutoHotkey\v1.1.37.02\AutoHotkeyU64.exe"
