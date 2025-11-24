@@ -6,10 +6,8 @@
 
     AutoHotkey v1.1+（必需）
 
-    Python 3.x（可选，用于高级配置管理）
-
+    Python 3.10.8 (配置管理)
 快速安装
-
     安装 AutoHotkey
     bash
 
@@ -117,13 +115,12 @@ bash
 方法1：手动编辑配置文件
 
 编辑 config.txt 文件：
-ini
 
-# 格式：应用名 "应用路径" 热键
+# 格式：应用名"应用路径"热键
 # 示例：
-firefox "C:\Program Files\Mozilla Firefox\firefox.exe" #f
-code "D:\Microsoft VS Code\Code.exe" #c
-terminal "C:\Program Files\WindowsTerminal\wt.exe" #a
+firefox"C:\Program Files\Mozilla Firefox\firefox.exe"#f
+code"D:\Microsoft VS Code\Code.exe"#c
+terminal"C:\Program Files\WindowsTerminal\wt.exe"#a
 
 # 特殊值：
 # - #a = Win + A
