@@ -1,3 +1,221 @@
+安装与使用方法
+📥 安装步骤
+前置要求
+
+    Windows 操作系统
+
+    AutoHotkey v1.1+（必需）
+
+    Python 3.x（可选，用于高级配置管理）
+
+快速安装
+
+    安装 AutoHotkey
+    bash
+
+# 从官网下载并安装 AutoHotkey
+# 或使用 winget（Windows 11 推荐）
+winget install AutoHotkey.AutoHotkey
+
+获取 MyKey 项目
+bash
+
+# 方法1：下载 ZIP 压缩包
+# 点击 GitHub 页面的 "Code" → "Download ZIP"
+# 解压到任意目录，如 D:\MyKey\
+
+# 方法2：Git 克隆
+git clone https://github.com/yourusername/MyKey.git
+cd MyKey
+
+首次配置
+bash
+
+# 编辑配置文件（推荐使用记事本或 VS Code）
+# 打开 config.txt，修改应用路径为你的实际安装路径
+
+# 示例：将 Firefox 路径改为你的实际路径
+# 修改前：firefox "C:\Program Files (x86)\Mozilla Firefox\firefox.exe" #f
+# 修改后：firefox "D:\Browser\Firefox\firefox.exe" #f
+
+启动 MyKey
+bash
+
+# 方法1：直接运行
+双击 mykeys.ahk 文件
+
+# 方法2：命令行启动
+AutoHotkeyU64.exe mykeys.ahk
+
+# 方法3：使用 Python 管理工具（推荐）
+cd script
+python mykey.py --start
+
+开机自启动（可选）
+
+方法1：快捷方式到启动文件夹
+bash
+
+# 按 Win + R，输入 shell:startup
+# 将 mykeys.ahk 的快捷方式拖入此文件夹
+
+方法2：使用任务计划程序
+bash
+
+# 创建基本任务，触发器设为"计算机启动时"
+# 程序选择 AutoHotkey.exe，参数填写 mykeys.ahk 的完整路径
+
+🚀 基础使用方法
+核心快捷键功能
+
+🖥️ 窗口管理
+
+    Win + D - 渐进最小化（逐个隐藏窗口）
+
+    Win + E - 文件管理器循环切换
+
+    Alt + Tab - 按住 Alt 后使用 WASD 精确定位窗口
+
+🚀 应用快速启动/切换
+
+    Win + A - Windows Terminal（默认）
+
+    Win + F - Firefox 浏览器（默认）
+
+    Win + C - VS Code（默认）
+
+    Win + Q - Reader（默认）
+
+🖱️ 鼠标增强
+
+    鼠标侧键前 - 粘贴（Ctrl+V）
+
+    鼠标侧键后 - 复制（Ctrl+C）
+
+    Ctrl + 鼠标侧键 - Home/End 键
+
+    Ctrl + 右键 - 回车键
+
+验证安装成功
+
+    检查系统托盘
+
+        启动后，右下角系统托盘应出现 MyKey 图标
+
+        右键图标可查看菜单选项
+
+    测试基本功能
+    bash
+
+# 测试 Win + E
+# 应该能打开或在文件管理器窗口间切换
+
+# 测试 Win + D  
+# 应该逐个最小化窗口，而非直接显示桌面
+
+⚙️ 自定义配置
+方法1：手动编辑配置文件
+
+编辑 config.txt 文件：
+ini
+
+# 格式：应用名 "应用路径" 热键
+# 示例：
+firefox "C:\Program Files\Mozilla Firefox\firefox.exe" #f
+code "D:\Microsoft VS Code\Code.exe" #c
+terminal "C:\Program Files\WindowsTerminal\wt.exe" #a
+
+# 特殊值：
+# - #a = Win + A
+# - #f = Win + F  
+# - - = 无热键（不绑定）
+
+方法2：使用 Python 管理工具（推荐）
+bash
+
+# 进入脚本目录
+cd script
+
+# 查看当前配置
+python mykey.py -l
+
+# 添加/修改应用配置
+python mykey.py -c firefox "C:\new\path\firefox.exe" #f
+python mykey.py -c vscode #c                    # 仅修改热键
+python mykey.py -c chrome -p "C:\Chrome\chrome.exe" # 仅修改路径
+
+# 删除应用配置
+python mykey.py -c -r chrome
+
+# 应用配置更改
+python mykey.py --change
+
+方法3：快速预设配置
+bash
+
+# 查看预设分组
+python mykey.py -pp
+
+# 输出示例：
+# [#g]   0    android_stdio64
+#         1    java_idea64  
+#         2    pycharm64
+#         3    visual_stdio
+# [#q]   4    winword
+#         5    telegram
+#         6    powerpnt
+#         7    reader
+
+# 选择预设（输入对应数字）
+python mykey.py -pp 0 4 7
+# 这将为 android_stdio64、winword、reader 分配预设热键
+
+🔧 高级功能
+添加对新应用的支持
+
+    获取窗口信息
+    bash
+
+# 运行 WindowSpy（AutoHotkey 安装目录中）
+# 或右键系统托盘 MyKey 图标 → "Window Spy"
+
+创建应用配置文件
+bash
+
+# 在 fast_start 目录创建 应用名.txt
+# 参考现有模板编写窗口切换逻辑
+
+注册应用到系统
+bash
+
+python mykey.py --add 应用名 "应用路径"
+python mykey.py -c 应用名 #热键
+
+故障排除
+
+问题：热键无响应
+bash
+
+# 检查 AutoHotkey 是否正常运行
+# 查看系统托盘是否有 MyKey 图标
+
+# 检查热键冲突
+# 尝试修改 config.txt 中的热键组合
+
+问题：应用无法启动
+bash
+
+# 验证应用路径是否正确
+# 检查路径是否包含空格（需要用引号包围）
+
+# 使用绝对路径
+# 相对路径可能因工作目录变化而失效
+
+问题：窗口切换不正常
+bash
+
+# 使用 WindowSpy 确认窗口类名和进程名
+# 检查 fast_start/应用名.txt 中的匹配逻辑
 ## 项目名称
 
 **MyKey - Windows 快捷键重定义工具**
